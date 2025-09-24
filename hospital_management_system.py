@@ -1,3 +1,9 @@
+@app.function(
+    image=modal.Image.debian_slim()
+        .pip_install(["mysql.connector","time","datetime","tabulate"]),
+    gpu="A10G",
+    timeout=300, # 5m
+)
 import mysql.connector as ms
 import random
 import time 
@@ -1214,3 +1220,4 @@ At XYZ Hospital ,we redefine healthcare with empathy, innovation, and a commitme
     a='n'
 else:
     print('')
+
